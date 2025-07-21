@@ -1,28 +1,13 @@
 from django.shortcuts import render
 
+from .models import Book
+
 # Create your views here.
 def index(request):
+    book_list = Book.objects.order_by("order")
+
     context = {}
-    context['old_testament'] = [{
-        'name': '創世記',
-        'url': '#'
-    },
-    {
-        'name': '出埃及記',
-        'url': '#'
-    },
-    {
-        'name': '利未記',
-        'url': '#'
-    },
-    {
-        'name': '民數記',
-        'url': '#'
-    },
-    {
-        'name': '申命記',
-        'url': '#'
-    }]
+    context['old_testament'] = book_list
 
     context['new_testament'] = [{
         'name': '馬太福音',
