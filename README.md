@@ -1,2 +1,2 @@
 # bible-reading
- bible reading app
+bible reading app
