@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-(_1g=3oie=r-8&zmms(xa*wzn_*b*^u_i@(ai7pl4k5zoh(kz_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['bible-reading.onrender.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'bible-reading.onrender.com']
 
 
 # Application definition
