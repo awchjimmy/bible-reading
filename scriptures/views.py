@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import get_list_or_404, render
 
 from .models import Book, Verse
 
@@ -12,3 +12,14 @@ def index(request):
     context['verses'] = verse_list
 
     return render(request, 'scriptures/index.html', context)
+
+def verses(request, book, chapter):
+    book_list = Book.objects.order_by("order")
+    verses = get_list_or_404(Verse, book=book, chapter=chapter)
+
+    context = {}
+    context['old_testament'] = book_list
+    context['chapter'] = verses[0].chapter
+    context['verses'] = verses
+
+    return render(request, 'scriptures/verse.html', context)

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>閱讀聖經</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+  <div class="flex min-h-screen">
+    
+    <!-- Sidebar -->
+    <aside class="w-64 bg-gray-200 p-4">
+      <h2 class="text-xl font-bold mb-4">舊約聖經</h2>
+      <ul>
+        {% for book in old_testament %}
+        <li class="mb-2"><a href="{{ book.url }}" class="hover:text-gray-400">{{ book.name }}</a></li>
+        {% endfor %}
+      </ul>
+      <br>
+      <h2 class="text-xl font-bold mb-4">新約聖經</h2>
+      <ul>
+        {% for book in new_testament %}
+        <li class="mb-2"><a href="{{ book.url }}" class="hover:text-gray-400">{{ book.name }}</a></li>
+        {% endfor %}
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 p-6 bg-gray-100">
+      <h1 class="text-2xl font-semibold mb-4">創世記 - 第 {{ chapter }} 章</h1>
+
+      <ul>
+        {% for verse in verses %}
+        <li> {{ verse.content }} </li>
+        {% endfor %}
+      </ul>
+    </main>
+  </div>
+
+</body>
+
+</html>
