@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>閱讀聖經</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+  <div class="flex min-h-screen">
+    
+    <!-- Sidebar -->
+    {% block sidebar %}
+    {% include 'scriptures/sidebar.html' %}
+    {% endblock %}
+
+    <!-- Main Content -->
+    <main class="flex-1 ml-64 p-6 bg-gray-100">
+      <h1 class="text-2xl font-semibold mb-4">創世記 - 第 1 章</h1>
+
+      <ul>
+        {% for verse in verses %}
+        <li> {{ verse.content }} </li>
+        {% endfor %}
+      </ul>
+    </main>
+  </div>
+
+</body>
+
+</html>
