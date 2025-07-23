@@ -15,6 +15,7 @@ def chapter(request, book, chapter):
     context = {}
     context['old_testament'] = old_testament
     context['new_testament'] = new_testament
+    context['chapter'] = chapter
     context['chapters'] = chapters
     context['verses'] = verse_list
 

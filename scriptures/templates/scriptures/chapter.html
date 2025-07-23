@@ -1,7 +1,7 @@
 <section class="chapter-selector mb-4">
     <div>
-        {% for chapter in chapters %}
-        <a href="{% url 'scripture:chapter' book=1 chapter=chapter %}" class="mr-2"> {{chapter}} </a>
+        {% for ch in chapters %}
+        <a href="{% url 'scripture:chapter' book=1 chapter=ch %}" class="mr-2"> {{ch}} </a>
         {% endfor %}
     </div>
 </section>
