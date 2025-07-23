@@ -4,11 +4,13 @@ from .models import Book, Verse
 
 # Create your views here.
 def index(request):
-    book_list = Book.objects.order_by("order")
+    old_testament = Book.objects.filter(id__gte=1, id__lte=39)
+    new_testament = Book.objects.filter(id__gte=40, id__lte=66)
     verse_list = Verse.objects.filter(book=1, chapter=1)
 
     context = {}
-    context['old_testament'] = book_list
+    context['old_testament'] = old_testament
+    context['new_testament'] = new_testament
     context['verses'] = verse_list
 
     return render(request, 'scriptures/index.html', context)
