@@ -20,13 +20,17 @@ def chapter(request, book, chapter):
     context = {}
     context.update(load_sidebar())
 
+    # load book
+    book = get_object_or_404(Book, id=book)
+    context['book'] = book
+
     # load chapters
-    chapters = range(1, get_object_or_404(Book, id=1).chapter+1)
+    chapters = range(1, book.chapter+1)
     context['chapter'] = chapter
     context['chapters'] = chapters
 
     # load verses
-    verse_list = Verse.objects.filter(book=1, chapter=chapter)
+    verse_list = Verse.objects.filter(book=book, chapter=chapter)
     context['verses'] = verse_list
 
     return render(request, 'scriptures/index.html', context)

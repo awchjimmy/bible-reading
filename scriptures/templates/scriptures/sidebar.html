@@ -2,14 +2,14 @@
   <h2 class="text-xl font-bold mb-4">舊約聖經</h2>
   <ul>
     {% for book in old_testament %}
-    <li class="mb-2"><a href="{{ book.url }}" class="hover:text-gray-400">{{ book.name }}</a></li>
+    <li class="mb-2"><a href="{% url 'scripture:chapter' book.id 1 %}" class="hover:text-gray-400">{{ book.name }}</a></li>
     {% endfor %}
   </ul>
   <br>
   <h2 class="text-xl font-bold mb-4">新約聖經</h2>
   <ul>
     {% for book in new_testament %}
-    <li class="mb-2"><a href="{{ book.url }}" class="hover:text-gray-400">{{ book.name }}</a></li>
+    <li class="mb-2"><a href="{% url 'scripture:chapter' book.id 1 %}" class="hover:text-gray-400">{{ book.name }}</a></li>
     {% endfor %}
   </ul>
 </aside>
