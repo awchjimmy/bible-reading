@@ -1,7 +1,7 @@
 # CHANGELOG
 
 ### 2025-07-24
-- `scriptures` 實作基本功能
+- `scriptures` 完成 實作基本功能
 
 ### 2025-07-23
 - `scriptures` 實作基本功能
