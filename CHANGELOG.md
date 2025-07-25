@@ -1,5 +1,8 @@
 # CHANGELOG
 
+### 2025-07-25
+- `scriptures` 新增 feature requests
+
 ### 2025-07-24
 - `scriptures` 完成 實作基本功能
 
