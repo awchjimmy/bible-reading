@@ -11,3 +11,4 @@ bible reading app
 - [ ] 詩歌本 song book
 - [ ] 家譜 family tree
 - [ ] 插畫 gallery
+- [ ] 成就 achievements
