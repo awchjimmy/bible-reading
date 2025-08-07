@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['127.0.0.1', 'bible-reading.onrender.com']
 
 INSTALLED_APPS = [
     "scriptures.apps.ScripturesConfig",
+    "achievements.apps.AchievementsConfig",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

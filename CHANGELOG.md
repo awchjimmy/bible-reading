@@ -1,5 +1,8 @@
 # CHANGELOG
 
+### 2025-08-07
+- `achievements` 新增 achievements app
+
 ### 2025-07-25
 - `scriptures` 新增 feature requests
 
