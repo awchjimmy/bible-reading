@@ -1,6 +1,9 @@
 # CHANGELOG
 
 ### 2025-08-07
+- `achievements` 實作基本功能
+
+### 2025-08-07
 - `achievements` 新增 achievements app
 
 ### 2025-07-25

@@ -122,3 +122,11 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Filesystem path
+# This is the absolute path on disk where uploaded files are stored.
+MEDIA_ROOT = BASE_DIR / 'media'
+
+# Public-facing URL
+# This is the URL prefix Django uses to serve media files during development.
+MEDIA_URL = '/media/'
