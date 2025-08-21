@@ -7,7 +7,7 @@ from .models import BibleCover
 def index(request):
     context = {}
     book_covers = BibleCover.objects.all()
-    progress = 7
+    progress = 8
     context['finished'] = book_covers[:progress]
     context['unfinished'] = book_covers[progress:]
     return render(request, 'achievements/index.html', context)
