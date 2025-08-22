@@ -9,17 +9,17 @@
 <body class="h-full bg-gray-100">
     <h1 class="text-2xl font-semibold mx-16 my-8"> 閱讀成就 </h1>
 
-    <div class="flex gap-4 m-16" id="achievments-container">
+    <div class="grid grid-cols-3 sm:grid-cols-7 gap-4 m-16" id="achievments-container">
         {% for cover in finished %}
         <img src="{{ cover.image.url }}" class="rounded-2xl hover:drop-shadow-xl" alt="" width="100" height="75" />
         {% endfor %}
+        
+    </div>
+
+    <div class="grid grid-cols-3 sm:grid-cols-7 gap-4 m-16" id="achievments-container">
         {% for cover in unfinished %}
         <img src="{{ cover.image.url }}" class="rounded-2xl brightness-50" alt="" width="100" height="75" />
         {% endfor %}
-    </div>
-
-    <div class="flex gap-4 m-16" id="achievments-container">
-        
     </div>
 </body>
 </html>
